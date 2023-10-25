@@ -1,0 +1,163 @@
+/* Used SCSS variable for adding the color to various elemets */
+$cursor: pointer;
+
+$width: 138px;
+
+/* Used mixin for handling the button style */
+
+@mixin iconStyle{
+  //color: #5050bc;
+  padding: 11px;
+  font-size: 20px;
+}
+
+body{
+
+  height: 100vh;
+  width: 90%;
+  background: linear-gradient(#5d63a7, 50%, #bcbecf);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.add_task_button {
+  border-radius: 15px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(36, 14, 84);
+  color: aliceblue;
+  margin-left: 634px;
+  border: hidden;
+  cursor: $cursor; //Used variable defined in scssVariable stylesheet
+  margin-bottom: 17px;
+}
+
+ul li {
+  cursor: $cursor;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  font-size: 18px;
+  transition: 0.2s;
+  margin-bottom: 20px;
+  /* Used for expanding the list */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color:  rgb(229, 214, 216);
+  border-radius: 15px;
+  max-width: 467px;
+    margin-left: 444px;
+
+}
+
+.todo_form {
+  margin-left: 518px;
+  max-width: 344px;
+  background: rgb(229, 214, 216);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Handles the alignment of the different input fields */
+
+.title,
+.description,
+.due_date,
+.due_time {
+   margin-left: 41px;
+    color: #0a4b41;
+    font-weight: bold;
+
+}
+
+/* Used attribute selector which will style the input field having attribute name as title */
+
+[name*="title"] {
+    margin-left: 58px;
+    width: $width;
+}
+
+[name*="description"] {
+    margin-left: 4px;
+}
+
+/* Used attribute selector which will style the input field having attribute type as date */
+
+[type*="date"] {
+    margin-left: 22px;
+    width: $width;
+}
+
+[type*="time"] {
+    margin-left: 22px;
+    width: $width;
+}
+
+.saveTask {
+  cursor: $cursor;
+  border-radius: 15px;
+  text-align: center;
+  padding: 8px;
+  background-color: rgb(36, 14, 84);
+  color: aliceblue;
+  margin-left: 115px;
+  border: hidden;
+}
+
+.todo-title {
+  font-weight: bold;
+  color: #411b93;
+  font-size: 25px;
+}
+
+.todo-icons{
+    padding-right: 36px;
+    float: right;
+
+}
+
+.fa-trash{
+  @include iconStyle;
+color: #bf0b0b;
+}
+
+.fa-check{
+  @include iconStyle;
+//color: #036a20;
+}
+
+.fa-eye{
+  @include iconStyle;
+color: #6a0368;
+}
+
+.fa-pen{
+  @include iconStyle;
+  color: #6a4b03;
+}
+
+.todo-details {
+  color: #7e4492;
+  font-weight: bold;
+}
+
+.todoTitle,
+.todoDescription
+ {
+  color: #0a4b41;
+  font-weight: bold;
+
+}
+
+.updateTodobutton {
+  cursor: $cursor;
+  border-radius: 15px;
+  text-align: center;
+  padding: 8px;
+  background-color: rgb(36, 14, 84);
+  color: aliceblue;
+  margin-left: 115px;
+  border: hidden;
+}
